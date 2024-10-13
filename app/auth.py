@@ -26,7 +26,7 @@ def role_required(role):
             try:
                 # Décoder le token JWT
                 data = jwt.decode(token, current_app.config['JWT_SECRET_KEY'], algorithms=["HS256"])
-                user = User.query.get(data['sub'])  # Vérification de l'utilisateur par l'ID
+                user = User.query.get(data['sub'])  
 
                 # Vérifier le rôle
                 if user.role != role:
@@ -86,6 +86,6 @@ def protected_route():
 
 @auth_bp.route('/admin', methods=['GET'])
 @jwt_required()
-@role_required(RoleEnum.ADMIN)  # Vérifie que l'utilisateur a le rôle ADMIN
+@role_required(RoleEnum.ADMIN)  
 def admin_route():
     return jsonify({"message": "Welcome Admin!"}), 200

@@ -14,7 +14,7 @@ def index():
     return "Hello, User API!"
 
 
-# Route pour récupérer tous les utilisateurs
+
 @user_bp.route('/users', methods=['GET'])
 @jwt_required()  
 @role_required(RoleEnum.ADMIN)  
@@ -24,7 +24,6 @@ def get_users():
     users_list = [user.to_dict() for user in users]
     return jsonify(users_list), 200 
 
-# Route pour récupérer un utilisateur par son ID
 @user_bp.route('/users/<int:user_id>', methods=['GET'])
 def get_user(user_id):
     user = User.query.get_or_404(user_id)

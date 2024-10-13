@@ -35,8 +35,6 @@ def create_app(config_class=Config):
     migrate.init_app(app, db)
     bcrypt.init_app(app)
     jwt.init_app(app)
-
-    # Importer les modèles ici
     from app.models import User, Post, Group  
 
     # Import des blueprints
@@ -45,7 +43,7 @@ def create_app(config_class=Config):
     app.register_blueprint(user_bp, url_prefix='/api')
     app.register_blueprint(auth_bp, url_prefix='/api/auth')
 
-    # Gestionnaire d'erreurs global
+ 
     @app.errorhandler(Exception)
     def handle_exception(e):
         response = {
@@ -53,7 +51,7 @@ def create_app(config_class=Config):
             "message": str(e),
         }
         return jsonify(response), 500
-
+    
     # Configuration de Swagger
     SWAGGER_URL = '/swagger'
     API_URL = '/swagger.json'  

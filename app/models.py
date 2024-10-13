@@ -1,5 +1,5 @@
 from enum import Enum as PyEnum
-from sqlalchemy import Column, Integer, String, Enum  # Importez Enum à partir de SQLAlchemy
+from sqlalchemy import Column, Integer, String, Enum  
 from app import db
 from flask_bcrypt import Bcrypt
 
@@ -15,15 +15,13 @@ class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)  
     username = db.Column(db.String(50), unique=True, nullable=False) 
     email = db.Column(db.String(120), unique=True, nullable=False)  
-    password = db.Column(db.String(255), nullable=False)  # Utiliser 'password' pour stocker le hachage
+    password = db.Column(db.String(255), nullable=False)  
     role = db.Column(Enum(RoleEnum), nullable=False) 
 
     def set_password(self, password):
-        # Hache le mot de passe et le stocke dans le champ 'password'
         self.password = bcrypt.generate_password_hash(password).decode('utf-8')
 
     def check_password(self, password):
-        # Vérifie si le mot de passe donné correspond au mot de passe haché
         return bcrypt.check_password_hash(self.password, password)
     
     def to_dict(self):
@@ -36,7 +34,7 @@ class User(db.Model):
     def __repr__(self):
         return f'<User {self.username}>'
 
-# One-to-Many (Un à Plusieurs)
+
 class Post(db.Model):
     __tablename__ = 'posts'
 
@@ -51,7 +49,7 @@ class Post(db.Model):
         return f'<Post {self.title}>'
 
 
-# Many-to-Many
+
 group_user = db.Table('group_user',
     db.Column('user_id', db.Integer, db.ForeignKey('users.id'), primary_key=True),
     db.Column('group_id', db.Integer, db.ForeignKey('groups.id'), primary_key=True)
@@ -63,7 +61,7 @@ class Group(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(100), unique=True, nullable=False)
 
-    users = db.relationship('User', secondary=group_user, backref='groups')  # Relation Many-to-Many
+    users = db.relationship('User', secondary=group_user, backref='groups') 
 
     def __repr__(self):
         return f'<Group {self.name}>'
