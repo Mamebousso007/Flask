@@ -1,103 +1,11 @@
-alembic
-altair
-aniso8601
-arrow
-asgiref
-Automat
-backports.weakref
-bcrypt
-blinker
-# cachetools
-# chart-studio
-# cloudpickle
-# colorlover
-configparser
-constantly
-coverage
-coveralls
-cufflinks
-distlib
-# Django
-# django-cors-headers
-# django-environ
-# django-filter
-# djangorestframework
-docopt
-
-Flask
-Flask-Bcrypt
-Flask-JWT-Extended
-Flask-Migrate
-Flask-RESTful
-Flask-SQLAlchemy
-flask-swagger-ui
-fqdn
-genson
-gitdb
-GitPython
-greenlet
-hyperlink
-hypothesis
-incremental
-iniconfig
-isoduration
-itsdangerous
-joblib
-jsonpointer
-jupyterlab
-jupyterlab_server
-Mako
-Markdown
-markdown-it-py
-marshmallow
-mdurl
-# mkl-service
-mock
-narwhals
-navigator-updater
-nltk
-# notebook
-# plotly
-# pluggy
-# ply
-# protobuf
-# psycopg-binary
-psycopg2
-psycopg2-binary
-# pyarrow
-# pydeck
-PyMySQL
-pyOpenSSL
-PyQt5
-PyQtWebEngine
-pytest
-pytest-cov
-pytest-flask
-python-dotenv
-regex
-retrying
-rich
-# scikit-learn
-# scipy
-# seaborn
-simplejson
-smmap
-sortedcontainers
-SQLAlchemy
-sqlparse
-# streamlit
-tabpy
-tenacity
-textblob
-threadpoolctl
-toml
-Twisted
-types-python-dateutil
-tzdata
-uri-template
-virtualenv
-watchdog
-webcolors
-webencodings
-Werkzeug
-zope.interface
+Flask>=2.3.3
+Flask-SQLAlchemy>=2.5.2
+Flask-Migrate>=4.0.4
+Flask-RESTful>=0.3.9
+Flask-JWT-Extended>=4.4.4
+Flask-Bcrypt>=1.0.0
+python-dotenv>=1.0.0
+pytest>=7.3.1
+pytest-flask>=1.2.0
+coverage>=7.2.0
+marshmallow>=3.20.0
