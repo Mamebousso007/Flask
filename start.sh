@@ -1,2 +1,2 @@
 #!/bin/bash
-gunicorn app:app --bind 0.0.0.0:3000
+gunicorn -b 0.0.0.0:10000 run:app
