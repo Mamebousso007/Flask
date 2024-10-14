@@ -1,5 +1,5 @@
 
-python==3.9.19
+# python==3.9.19
 alembic==1.13.3
 altair==5.4.1
 aniso8601==9.0.1
