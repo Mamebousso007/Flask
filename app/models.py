@@ -7,6 +7,7 @@ bcrypt = Bcrypt()
 
 class RoleEnum(PyEnum):
     ADMIN = "ADMIN"
+    
     USER = "USER"
 
 class User(db.Model):

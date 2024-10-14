@@ -71,3 +71,5 @@ def create_app(config_class=Config):
         return send_from_directory('', 'swagger.json')
 
     return app
+
+app = create_app()
