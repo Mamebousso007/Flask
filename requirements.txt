@@ -7,21 +7,21 @@ Automat
 backports.weakref
 bcrypt
 blinker
-cachetools
-chart-studio
-cloudpickle
-colorlover
+# cachetools
+# chart-studio
+# cloudpickle
+# colorlover
 configparser
 constantly
 coverage
 coveralls
 cufflinks
 distlib
-Django
-django-cors-headers
-django-environ
-django-filter
-djangorestframework
+# Django
+# django-cors-headers
+# django-environ
+# django-filter
+# djangorestframework
 docopt
 
 Flask
@@ -51,22 +51,21 @@ Markdown
 markdown-it-py
 marshmallow
 mdurl
-mkl-service
+# mkl-service
 mock
 narwhals
 navigator-updater
 nltk
-notebook
-pandas
-plotly
-pluggy
-ply
-protobuf
-psycopg-binary
+# notebook
+# plotly
+# pluggy
+# ply
+# protobuf
+# psycopg-binary
 psycopg2
 psycopg2-binary
-pyarrow
-pydeck
+# pyarrow
+# pydeck
 PyMySQL
 pyOpenSSL
 PyQt5
@@ -78,15 +77,15 @@ python-dotenv
 regex
 retrying
 rich
-scikit-learn
-scipy
-seaborn
+# scikit-learn
+# scipy
+# seaborn
 simplejson
 smmap
 sortedcontainers
 SQLAlchemy
 sqlparse
-streamlit
+# streamlit
 tabpy
 tenacity
 textblob
