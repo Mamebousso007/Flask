@@ -6,7 +6,7 @@
       "description": "API pour gérer les utilisateurs"
     },
     "basePath": "/api",
-    "schemes": ["http"],
+    "schemes": ["https"],
     "securityDefinitions": {
       "Bearer": {
         "type": "apiKey",
