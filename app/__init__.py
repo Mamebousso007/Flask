@@ -53,7 +53,7 @@ def create_app(config_class=Config):
         return jsonify(response), 500
     
     # Configuration de Swagger
-    SWAGGER_URL = '/swagger'
+    SWAGGER_URL = ''
     API_URL = '/swagger.json'  
 
     swaggerui_blueprint = get_swaggerui_blueprint(
