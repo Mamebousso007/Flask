@@ -90,3 +90,4 @@ webcolors==24.6.0
 webencodings==0.5.1
 Werkzeug==3.0.3
 zope.interface==7.0.3
+python_version == 3.12.5
